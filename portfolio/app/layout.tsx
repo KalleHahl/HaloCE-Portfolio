@@ -1,8 +1,14 @@
 import "./globals.css"
 import { Header } from "../components/Header"
+import localfont from "next/font/local"
 import { Inter } from "next/font/google"
 
 const inter = Inter({ subsets: ["latin"] })
+
+const handel = localfont({
+  src: "../public/fonts/HandelGothic BT.ttf",
+  variable: "--font-handel",
+})
 
 export const metadata = {
   title: "Kalle | Personal Portfolio",
@@ -17,15 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
-      >
-        <div className="absolute inset-0 h-screen flex items-center justify-center">
-          <div className="bg-[#cbd5e1] h-[60rem] w-[100rem] rounded-full blur-[15rem]"></div>
-        </div>
-        <Header />
-        {children}
-      </body>
+      <body className={`${handel.variable}`}>{children}</body>
     </html>
   )
 }
