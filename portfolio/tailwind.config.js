@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const plugin = require("tailwindcss/plugin")
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -15,7 +18,22 @@ module.exports = {
       fontFamily: {
         handel: ["var(--font-handel)"],
       },
+      textShadow: {
+        sm: "0 0px 16px var(--tw-shadow-color)",
+        lg: "0 0px 28px var(--tw-shadow-color)",
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          "text-shadow": (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme("textShadow") }
+      )
+    }),
+  ],
 }
