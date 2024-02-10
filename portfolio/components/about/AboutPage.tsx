@@ -7,13 +7,12 @@ import AboutTextContainer from "./AboutTextContainer"
 const AboutPage = () => {
   return (
     <GradientBackground text="ABOUT">
-      <div className="flex flex-row h-96 md:h-full relative">
-        <div className="flex flex-row flex-shrink">
-          <MyImage />
-        </div>
-        <div className="flex py-11 px-11">
-          <AboutTextContainer />
-        </div>
+      <div className="flex flex-col  md:h-full relative">
+        <MyImage />
+      </div>
+      <div className="flex flex-col w-full md:h-full relative">
+        {" "}
+        <AboutTextContainer />
       </div>
     </GradientBackground>
   )
