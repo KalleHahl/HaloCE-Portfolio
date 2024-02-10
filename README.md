@@ -4,8 +4,8 @@
 ## Portfolio page that resembles the Halo: Combat Evolved [menu](https://www.youtube.com/watch?v=zb1fylPnZLM&list=RDzb1fylPnZLM&start_radio=1)
 I made this project for fun and as a way to learn to use Next.js and Tailwind CSS, both of which were previously unfamiliar to me. Any tips and suggestions are appreciated!
 ### Current state
-<img src="https://github.com/KalleHahl/HaloCE-Porfolio/tree/main/portfolio/docs/main1.png" alt="menu pic">
-<img src="https://github.com/KalleHahl/HaloCE-Porfolio/tree/main/portfolio/docs/projects1.png" alt="projects pic">
+<img src="https://github.com/KalleHahl/HaloCE-Portfolio/blob/main/portfolio/docs/main1.png" alt="menu pic">
+<img src="https://github.com/KalleHahl/HaloCE-Portfolio/blob/main/portfolio/docs/projects1.png" alt="projects pic">
 
 
 
