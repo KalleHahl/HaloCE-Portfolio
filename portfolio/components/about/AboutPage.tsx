@@ -1,45 +1,20 @@
 import React from "react"
 
-import MyImage from "@/components/about/MyImage"
+import MyImage from "./MyImage"
 import GradientBackground from "@/components/GradientBackground"
+import AboutTextContainer from "./AboutTextContainer"
 
 const AboutPage = () => {
   return (
     <GradientBackground text="ABOUT">
-      {/* <div className="flex flex-row relative">
-        <div className="flex flex-row">
+      <div className="flex flex-row h-96 md:h-full relative">
+        <div className="flex flex-row flex-shrink">
           <MyImage />
         </div>
-        <div className="flex flex-row">
-          <p className="bg-sky-700">
-            Loremipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa.
-          </p>
-          <p>
-            Loremipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa.
-          </p>
-          <p>
-            Loremipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa.
-          </p>
+        <div className="flex py-11 px-11">
+          <AboutTextContainer />
         </div>
-      </div> */}
+      </div>
     </GradientBackground>
   )
 }
