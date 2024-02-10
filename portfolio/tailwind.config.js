@@ -20,7 +20,10 @@ module.exports = {
       },
       textShadow: {
         sm: "0 0px 16px var(--tw-shadow-color)",
-        lg: "0 0px 28px var(--tw-shadow-color)",
+        lg: "0 0px 36px var(--tw-shadow-color)",
+      },
+      screens: {
+        "4k": "3840px",
       },
     },
   },
