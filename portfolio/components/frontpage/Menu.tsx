@@ -7,7 +7,7 @@ const MenuItem = ({ text, href }: { text: string; href: string }) => {
     <Link href={href}>
       <div className="group relative">
         {/* <div className="w-full md:max-w-xl h-10 md:h-14 blur-xl group-hover:bg-sky-600 ease-in-out rounded-full absolute top-4" /> */}
-        <p className=" text-sky-700 opacity-80 text-4xl md:text-6xl 4k:text-8xl rounded-full font-handel py-4 transition duration-300 ease-in-out group-hover:scale-105 group-hover:text-white group-hover:opacity-100 group-hover:text-shadow-lg shadow-sky-600">
+        <p className=" text-sky-700 opacity-70 text-4xl md:text-6xl 4k:text-8xl rounded-full font-handel py-2 transition duration-300 ease-in-out group-hover:scale-105 group-hover:text-white group-hover:opacity-100 group-hover:text-shadow-lg shadow-sky-400">
           {text}
         </p>
       </div>
