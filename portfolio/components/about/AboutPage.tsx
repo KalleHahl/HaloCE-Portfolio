@@ -7,11 +7,8 @@ import AboutTextContainer from "./AboutTextContainer"
 const AboutPage = () => {
   return (
     <GradientBackground text="ABOUT">
-      <div className="flex flex-col  md:h-full relative">
+      <div className="flex flex-col h-full xl:flex-row">
         <MyImage />
-      </div>
-      <div className="flex flex-col w-full md:h-full relative">
-        {" "}
         <AboutTextContainer />
       </div>
     </GradientBackground>
