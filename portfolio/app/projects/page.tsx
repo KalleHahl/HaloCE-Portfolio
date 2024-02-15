@@ -1,11 +1,12 @@
 import GradientBackground from "../../components/GradientBackground"
+import ProjectsPage from "../../components/projects/ProjectsPage"
 
-const ProjectsPage = () => {
+const Projects = () => {
   return (
     <GradientBackground text="PROJECTS">
-      <div className="flex flex-col h-96 md:flex-row md:h-full relative"></div>
+      <ProjectsPage />
     </GradientBackground>
   )
 }
 
-export default ProjectsPage
+export default Projects
