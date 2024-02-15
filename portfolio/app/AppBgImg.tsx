@@ -9,7 +9,8 @@ export default function AppBgImg() {
       placeholder="blur"
       fill
       sizes="100vw"
-      style={{ objectFit: "cover", zIndex: -1 }}
+      style={{ objectFit: "cover", zIndex: -1, position: "absolute" }}
+      priority
     />
   )
 }
