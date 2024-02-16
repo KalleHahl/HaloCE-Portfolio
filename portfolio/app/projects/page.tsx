@@ -1,10 +1,11 @@
 import GradientBackground from "../../components/GradientBackground"
-import ProjectsPage from "../../components/projects/ProjectsPage"
+import Carousel from "@/components/Carousel"
+import { projects } from "@/public/data/projects"
 
 const Projects = () => {
   return (
     <GradientBackground text="PROJECTS">
-      <ProjectsPage />
+      <Carousel items={projects} />
     </GradientBackground>
   )
 }
