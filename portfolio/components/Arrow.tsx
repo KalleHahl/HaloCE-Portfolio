@@ -1,8 +1,9 @@
 interface TriangleProps {
   direction: "right" | "left"
+  handleCLick: (direction: "right" | "left") => void
 }
 
-const Arrow = ({ direction }: TriangleProps) => {
+const Arrow = ({ direction, handleCLick }: TriangleProps) => {
   const w = 40
   const h = 400
   const points = {
@@ -20,6 +21,7 @@ const Arrow = ({ direction }: TriangleProps) => {
         <polygon
           points={points[direction].join(" ")}
           className="fill-sky-700 opacity-50 stroke-sky-500 hover:fill-white"
+          onClick={() => handleCLick(direction)}
         />
       </svg>
     </div>
