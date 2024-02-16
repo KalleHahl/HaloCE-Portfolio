@@ -16,7 +16,7 @@ const GradientBackground = ({
           <motion.p
             initial={{ x: "-100%", opacity: 0 }}
             animate={{ x: "-50%", opacity: 1 }}
-            className="font-handel text-shadow-lg shadow-sky-900 text-5xl xl:text-7xl absolute text-sky-500 bottom-0 left-1/2 -translate-x-1/2 xl:left-1/4"
+            className="font-handel text-shadow-lg shadow-sky-900 text-5xl lg:text-7xl absolute text-sky-500 bottom-0 left-1/2 -translate-x-1/2 lg:left-1/4"
           >
             {text}
           </motion.p>
