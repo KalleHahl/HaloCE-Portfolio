@@ -1,14 +1,15 @@
 "use client"
+import { motion } from "framer-motion"
+import { useState } from "react"
 import Arrow from "./Arrow"
 import InfoCard from "./InfoCard"
-import { useState } from "react"
 
 import { CarouselProps } from "@/types/carouselCardTypes"
 
 const Carousel = ({ items }: CarouselProps) => {
-  const [firstIndex, setFirstIndex] = useState(0)
-  const [secondIndex, setSecondIndex] = useState(1)
-  const [thirdIndex, setThirdIndex] = useState(2)
+  const [firstIndex, setFirstIndex] = useState<number>(0)
+  const [secondIndex, setSecondIndex] = useState<number>(1)
+  const [thirdIndex, setThirdIndex] = useState<number>(2)
 
   const itemsLength = items.length
   const handleCLick = (direction: "left" | "right") => {
@@ -23,9 +24,14 @@ const Carousel = ({ items }: CarouselProps) => {
     }
   }
   return (
-    <div className="relative flex h-full justify-center">
+    <motion.div
+      className="relative flex h-full justify-center"
+      initial={{ y: 10, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5, delay: 1 }}
+    >
       <Arrow direction="left" handleCLick={handleCLick} />
-      <div className="flex w-full absolute lg:relative invisible lg:visible justify-center px-4 gap-4">
+      <div className="flex w-full absolute xl:relative invisible xl:visible justify-center px-4 gap-4">
         <InfoCard item={items[firstIndex]} />
         <InfoCard item={items[secondIndex]} />
         {items.length >= 3 && (
@@ -34,7 +40,7 @@ const Carousel = ({ items }: CarouselProps) => {
           </>
         )}
       </div>
-      <div className="flex w-full absolute invisible md:visible md:relative lg:invisible lg:absolute justify-center px-4 gap-4">
+      <div className="flex w-full absolute invisible md:visible md:relative xl:invisible xl:absolute justify-center px-4 gap-4">
         <InfoCard item={items[firstIndex]} />
         <InfoCard item={items[secondIndex]} />
       </div>
@@ -42,7 +48,7 @@ const Carousel = ({ items }: CarouselProps) => {
         <InfoCard item={items[firstIndex]} />
       </div>
       <Arrow direction="right" handleCLick={handleCLick} />
-    </div>
+    </motion.div>
   )
 }
 
