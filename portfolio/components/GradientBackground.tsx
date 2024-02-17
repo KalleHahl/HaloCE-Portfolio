@@ -25,8 +25,8 @@ const GradientBackground = ({
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        className="flex flex-1 relative overflow-hidden border-b-[3px] border-t-[3px] 4k:border-t-8 4k:border-b-8 border-sky-500"
+        transition={{ duration: 0.5 }}
+        className="flex flex-1 relative overflow-hidden border-b-[3px] border-t-[3px] 2k:border-t-[6px] 2k:border-b-[6px] border-sky-500"
       >
         <div className="absolute inset-0 bg-gradient-to-b from-sky-900 to-black h-full opacity-60"></div>{" "}
         <div className="py-2 px-2 flex-grow">{children}</div>
