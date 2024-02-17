@@ -15,7 +15,7 @@ const InfoCard = ({ item }: { item: CarouselCard }) => {
       </p>
       <div className="flex justify-center px-4">
         <Image
-          src={item.image as string}
+          src={item.image}
           alt={item.title as string}
           className="width-full h-auto max-h-40 lg:max-h-56 2k:max-h-80"
         />
@@ -51,7 +51,7 @@ const InfoCard = ({ item }: { item: CarouselCard }) => {
       </p>
       <div className="flex justify-center">
         <Image
-          src={item.difficulty as string}
+          src={item.difficulty}
           alt="difficulty"
           className="w-20 h-20 lg:w-32 lg:h-32 mt-4 2k:w-60 2k:h-full"
         />

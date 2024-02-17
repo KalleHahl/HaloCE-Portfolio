@@ -1,8 +1,10 @@
+import { StaticImageData } from "next/image"
+
 interface BaseCard {
   title: String
   description: String
-  image: String
-  difficulty: String
+  image: StaticImageData
+  difficulty: StaticImageData
 }
 
 export interface ProjectCard extends BaseCard {
