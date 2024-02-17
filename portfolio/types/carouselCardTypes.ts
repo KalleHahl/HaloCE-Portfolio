@@ -2,6 +2,7 @@ interface BaseCard {
   title: String
   description: String
   image: String
+  difficulty: String
 }
 
 export interface ProjectCard extends BaseCard {
