@@ -24,6 +24,7 @@ module.exports = {
       },
       screens: {
         "4k": "3840px",
+        "2k": "2560px",
       },
     },
   },
