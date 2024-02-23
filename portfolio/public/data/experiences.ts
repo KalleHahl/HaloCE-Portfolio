@@ -9,6 +9,7 @@ export const experiences = [
     description: "Worked at the local grocery store as a cashier and a stocker",
     image: "prisma.png",
     time: "2018-2020",
+    url: "https://hok-elanto.fi/",
     difficulty: normal,
   },
   {
@@ -16,6 +17,7 @@ export const experiences = [
     description: "Part time work in various roles in a grocery store",
     image: "vertico.png",
     time: "2020-2021",
+    url: "https://www.henkilostopartneri.fi/",
     difficulty: heroic,
   },
 ]

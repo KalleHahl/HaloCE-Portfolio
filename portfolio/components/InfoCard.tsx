@@ -4,12 +4,18 @@ import {
   ExperienceCard,
 } from "@/types/carouselCardTypes"
 import Image from "next/image"
+import Link from "next/link"
 
 const InfoCard = ({ item }: { item: CarouselCard }) => {
   const project = "technologies" in item
   const experience = "time" in item
   return (
-    <div className="w-full h-full overflow-hidden rounded-2xl border-4 border-transparent bg-black bg-opacity-30 px-2 hover:border-sky-500 hover:bg-sky-900 hover:bg-opacity-30">
+    <Link
+      href={item.url}
+      rel="noopener noreferrer"
+      target="_blank"
+      className="w-full h-full overflow-hidden rounded-2xl border-4 border-transparent bg-black bg-opacity-30 px-2 hover:border-sky-500 hover:bg-sky-900 hover:bg-opacity-30"
+    >
       <p className="text-center text-xl lg:text-2xl 2k:text-4xl font-bold text-sky-500">
         {item.title}
       </p>
@@ -56,7 +62,7 @@ const InfoCard = ({ item }: { item: CarouselCard }) => {
           className="w-20 h-20 lg:w-28 lg:h-28 mt-4 2k:w-60 2k:h-full"
         />
       </div>
-    </div>
+    </Link>
   )
 }
 

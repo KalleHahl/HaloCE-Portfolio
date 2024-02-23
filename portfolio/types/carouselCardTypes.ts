@@ -5,6 +5,7 @@ interface BaseCard {
   description: String
   image: StaticImageData
   difficulty: StaticImageData
+  url: URL
 }
 
 export interface ProjectCard extends BaseCard {

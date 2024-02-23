@@ -15,6 +15,7 @@ export const projects = [
     description: "Desktop application of the classic game Tetris",
     image: tetris,
     technologies: "Python, Pygame, Pytest, Poetry",
+    url: "https://github.com/KalleHahl/TETRIS",
     difficulty: heroic,
   },
   {
@@ -23,6 +24,7 @@ export const projects = [
       "Command line application that evaluates mathematical expressions using the shunting yard algorithm",
     image: shunting,
     technologies: "Python, Pytest, Poetry",
+    url: "https://github.com/KalleHahl/Shunting-Yard-Calculator",
     difficulty: normal,
   },
   {
@@ -30,6 +32,7 @@ export const projects = [
     description: "Music visualization for concerts",
     image: muvico,
     technologies: "React, Node.js, Express, MongoDB, Docker",
+    url: "https://github.com/MuViCo/MuViCo",
     difficulty: legendary,
   },
   {
@@ -37,6 +40,7 @@ export const projects = [
     description: "Command line application that manages BibTex citations",
     image: bibtex,
     technologies: "Python, Pytest, Poetry, Robot Framework",
+    url: "https://github.com/helinal/ohtu-miniprojekti",
     difficulty: easy,
   },
   {
@@ -45,6 +49,7 @@ export const projects = [
       "Portfolio website created in the spirit of the game Halo: Combat Evolved",
     image: halo1,
     technologies: "React, Next.js, Tailwind CSS, Framer Motion, Vercel",
+    url: "https://github.com/KalleHahl/HaloCE-Portfolio",
     difficulty: legendary,
   },
 ]
