@@ -1,4 +1,4 @@
-export default function AppBgImg() {
+export default function AppBgVideo() {
   return (
     <video
       src={require("../public/BGvideo.mp4")}

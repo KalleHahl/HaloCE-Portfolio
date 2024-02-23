@@ -1,7 +1,8 @@
 import "./globals.css"
 import React from "react"
-import AppBgImg from "./AppBgImg"
+
 import localfont from "next/font/local"
+import AppBgVideo from "./AppBgVideo"
 
 const handel = localfont({
   src: "../public/fonts/HandelGothic BT.ttf",
@@ -18,7 +19,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
       <body className={`${handel.variable} bg-black relative`}>
-        <AppBgImg />
+        <AppBgVideo />
         {children}
       </body>
     </html>
