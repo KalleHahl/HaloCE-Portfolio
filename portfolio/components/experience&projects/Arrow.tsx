@@ -21,7 +21,7 @@ const Arrow = ({ direction, handleCLick }: TriangleProps) => {
         <polygon
           points={points[direction].join(" ")}
           tabIndex={0}
-          className="fill-sky-700 opacity-50 stroke-sky-500 hover:fill-white focus:fill-white"
+          className="fill-sky-700 opacity-50 stroke-sky-500 hover:fill-white"
           onClick={() => handleCLick(direction)}
         />
       </svg>
