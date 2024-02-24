@@ -2,12 +2,14 @@
 
 import { motion } from "framer-motion"
 import { useState } from "react"
+
 import Arrow from "./Arrow"
 import InfoCard from "./InfoCard"
-
+import useWindowDimensions from "@/utils/useWindowDimension"
 import { CarouselProps } from "@/types/carouselCardTypes"
 
 const Carousel = ({ items }: CarouselProps) => {
+  const { width = 1920 } = useWindowDimensions()
   const [currentIndex, setCurrentIndex] = useState<number>(0)
   const itemsLength = items.length
 
@@ -19,8 +21,7 @@ const Carousel = ({ items }: CarouselProps) => {
     )
   }
 
-  const cards = items.length >= 3 ? [0, 1, 2] : [0, 1]
-
+  const cards = width < 640 ? [0] : width < 1280 ? [0, 1] : [0, 1, 2]
   return (
     <motion.div
       className="relative flex h-full justify-center"

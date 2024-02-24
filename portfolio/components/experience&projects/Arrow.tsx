@@ -1,11 +1,14 @@
+import useWindowDimensions from "@/utils/useWindowDimension"
+
 interface TriangleProps {
   direction: "right" | "left"
   handleCLick: (direction: "right" | "left") => void
 }
 
 const Arrow = ({ direction, handleCLick }: TriangleProps) => {
-  const w = 40
-  const h = 300
+  const { width = 1920 } = useWindowDimensions()
+  const w = width < 640 ? 30 : 40
+  const h = width < 640 ? 225 : 300
   const points = {
     top: [`${w / 2},0`, `0,${h}`, `${w},${h}`],
     right: [`0,0`, `0,${h}`, `${w},${h / 2}`],
