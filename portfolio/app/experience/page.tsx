@@ -1,5 +1,5 @@
 import GradientBackground from "@/components/GradientBackground"
-import Carousel from "@/components/Carousel"
+import Carousel from "@/components/experience&projects/Carousel"
 import { experiences } from "@/public/data/experiences"
 
 const ExperiencePage = () => {

@@ -1,19 +1,19 @@
 import { StaticImageData } from "next/image"
 
 interface BaseCard {
-  title: String
-  description: String
+  title: string
+  description: string
   image: StaticImageData
   difficulty: StaticImageData
-  url: URL
+  url: string
 }
 
 export interface ProjectCard extends BaseCard {
-  technologies: String
+  technologies: string
 }
 
 export interface ExperienceCard extends BaseCard {
-  time: String
+  time: string
 }
 
 export type CarouselCard = ProjectCard | ExperienceCard
