@@ -30,25 +30,28 @@ const GradientBackground = ({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="flex flex-1 relative overflow-hidden border-b-[3px] border-t-[3px] 2k:border-t-[6px] 2k:border-b-[6px] border-sky-500"
+        className="flex flex-1 relative overflow-hidden border-b-[2px] border-t-[2px] 2k:border-t-[6px] 2k:border-b-[6px] border-sky-500"
       >
         <div className="absolute inset-0 bg-gradient-to-b from-sky-900 to-black h-full opacity-60"></div>
-        <div className="py-2 px-2 flex-grow">{children}</div>
+        <div className="p-3 2k:p-5 flex-grow">{children}</div>
       </motion.div>
       <div className="flex justify-end h-36 2k:h-48 4k:h-64 py-3">
-        <Link
-          href="/"
-          className="group relative flex translate-x-1/2 right-1/2 lg:right-1/4 focus:outline-none "
+        <motion.div
+          initial={{ x: "-100%", opacity: 0 }}
+          animate={{ x: "50%", opacity: 1 }}
+          className="relative translate-x-1/2 right-1/2 lg:right-1/4"
         >
-          <Image
-            src={back}
-            className=" rounded-full mx-4 skew-x-12 size-9 lg:size-14 drop-shadow-sm duration-300 ease-in-out group-hover:scale-105 group-focus:scale-105  group-focus:outline-none"
-            alt="backbutton"
-          />
-          <p className="font-bold text-3xl lg:text-5xl text-shadow-lg shadow-sky-900 transition duration-300 ease-in-out group-hover:shadow-sky-400  group-hover:text-white group-hover:scale-105 group-focus:scale-105 group-focus:text-white group-focus:shadow-sky-400 group-focus:outline-none">
-            =BACK
-          </p>
-        </Link>
+          <Link href="/" className="group  flex  focus:outline-none ">
+            <Image
+              src={back}
+              className=" rounded-full mx-4 skew-x-12 size-9 lg:size-14 drop-shadow-sm duration-300 ease-in-out group-hover:scale-105 group-focus:scale-105  group-focus:outline-none"
+              alt="backbutton"
+            />
+            <p className="font-bold text-3xl lg:text-5xl text-shadow-lg shadow-sky-900 transition duration-300 ease-in-out group-hover:shadow-sky-400  group-hover:text-white group-hover:scale-105 group-focus:scale-105 group-focus:text-white group-focus:shadow-sky-400 group-focus:outline-none">
+              =BACK
+            </p>
+          </Link>
+        </motion.div>
       </div>
     </div>
   )

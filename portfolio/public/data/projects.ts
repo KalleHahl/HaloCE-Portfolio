@@ -19,7 +19,7 @@ export const projects = [
     difficulty: heroic,
   },
   {
-    title: "Shunting Yard Calculator",
+    title: "Algorithmic Calculator",
     description:
       "Command line application that evaluates mathematical expressions using the shunting yard algorithm",
     image: shunting,

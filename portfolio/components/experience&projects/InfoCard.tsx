@@ -14,12 +14,12 @@ const InfoCard = ({ item }: { item: CarouselCard }) => {
       href={item.url}
       rel="noopener noreferrer"
       target="_blank"
-      className="w-full h-full lg:py-2 overflow-y-auto rounded-3xl scrollbar-none bg-black bg-opacity-30 px-2 hover:ring-4 hover:ring-sky-500 hover:bg-sky-900 hover:bg-opacity-30 focus:outline-none focus:ring-4 focus:ring-sky-500 focus:bg-sky-900 focus:bg-opacity-30"
+      className="w-full h-full lg:py-2 overflow-y-auto rounded-3xl scrollbar-none bg-black bg-opacity-30 px-2 2k:px-4 hover:ring-4 2k:hover:ring-8 hover:ring-sky-500 hover:bg-sky-900 hover:bg-opacity-30 focus:outline-none focus:ring-4 focus:ring-sky-500 focus:bg-sky-900 focus:bg-opacity-30"
     >
-      <p className="text-center text-lg lg:text-3xl 2k:text-5xl font-bold ">
+      <p className=" text-center text-lg lg:text-3xl 2k:text-5xl font-bold ">
         {item.title}
       </p>
-      <div className="flex justify-center px-4">
+      <div className="flex justify-center px-4 2k:pt-2">
         <Image
           src={item.image}
           alt={item.title}
@@ -52,14 +52,15 @@ const InfoCard = ({ item }: { item: CarouselCard }) => {
           </p>
         </>
       )}
-      <p className="mt-2 2k:mt-6 text-lg lg:text-2xl 2k:text-5xl font-bold ">
+      <p className=" mt-2 2k:mt-6 text-lg lg:text-2xl 2k:text-5xl font-bold ">
         Difficulty:
       </p>
+
       <div className="flex justify-center">
         <Image
           src={item.difficulty}
           alt="difficulty"
-          className="size-20 lg:size-28 mt-4 2k:size-52"
+          className="size-20 lg:size-28 mt-4 2k:size-52 -translate-y-1/4 2k:translate-y-1/4"
         />
       </div>
     </Link>
