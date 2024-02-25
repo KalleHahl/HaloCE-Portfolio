@@ -1,7 +1,7 @@
 export default function AppBgVideo() {
   return (
     <video
-      src={require("../public/BGvideo.mp4")}
+      src="/BGvideo.mp4"
       style={{
         width: "100%",
         height: "100%",
