@@ -1,13 +1,13 @@
-import muvico from "@/public/muvico.jpeg"
-import tetris from "@/public/tetris.png"
-import shunting from "@/public/shunting.jpg"
-import bibtex from "@/public/bibtex.png"
-import halo1 from "@/public/halo1.jpg"
+import muvico from "@/public/projectphotos/muvico.jpeg"
+import tetris from "@/public/projectphotos/tetris.png"
+import shunting from "@/public/projectphotos/shunting.jpg"
+import bibtex from "@/public/projectphotos/bibtex.png"
+import halo1 from "@/public/projectphotos/halo1.jpg"
 
-import easy from "@/public/easy.png"
-import normal from "@/public/normal.png"
-import heroic from "@/public/heroic.png"
-import legendary from "@/public/legendary.png"
+import easy from "@/public/difficulties/easy.png"
+import normal from "@/public/difficulties/normal.png"
+import heroic from "@/public/difficulties/heroic.png"
+import legendary from "@/public/difficulties/legendary.png"
 
 export const projects = [
   {

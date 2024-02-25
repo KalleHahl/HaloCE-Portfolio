@@ -1,9 +1,10 @@
-import easy from "@/public/easy.png"
-import normal from "@/public/normal.png"
-import heroic from "@/public/heroic.png"
-import legendary from "@/public/legendary.png"
-import prisma from "@/public/prisma.jpg"
-import vertico from "@/public/vertico.png"
+import easy from "@/public/difficulties/easy.png"
+import normal from "@/public/difficulties/normal.png"
+import heroic from "@/public/difficulties/heroic.png"
+import legendary from "@/public/difficulties/legendary.png"
+import prisma from "@/public/workphotos/prisma.jpg"
+import vertico from "@/public/workphotos/vertico.png"
+import demande from "@/public/workphotos/demande.png"
 
 export const experiences = [
   {
@@ -21,5 +22,13 @@ export const experiences = [
     time: "2020-2021",
     url: "https://www.henkilostopartneri.fi/",
     difficulty: heroic,
+  },
+  {
+    title: "Demande Oy",
+    description: "Work in various roles in events and such",
+    image: demande,
+    time: "2023-ongoing",
+    url: "https://www.demande.fi/",
+    difficulty: easy,
   },
 ]
