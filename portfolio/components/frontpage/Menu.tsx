@@ -18,7 +18,7 @@ const MenuItem = ({ text, href }: { text: string; href: string }) => {
 
 const Menu = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
+    <div className="grid place-content-center h-screen">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
