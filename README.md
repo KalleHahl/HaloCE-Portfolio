@@ -8,5 +8,5 @@ I made this project for fun and as a way to learn to use Next.js and Tailwind CS
 
 ### Current state
 
-<img src="https://github.com/KalleHahl/HaloCE-Portfolio/blob/main/docs/main1.png" alt="menu pic">
+<img src="https://github.com/KalleHahl/HaloCE-Portfolio/blob/main/docs/frontpage.png" alt="menu pic">
 <img src="https://github.com/KalleHahl/HaloCE-Portfolio/blob/main/docs/projects1.png" alt="projects pic">
