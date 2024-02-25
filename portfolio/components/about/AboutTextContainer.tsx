@@ -6,7 +6,7 @@ import PersonalInfo from "./PersonalInfo"
 
 const AboutTextContainer = () => {
   return (
-    <div className="lg:w-full mt-5 xl:mt-0 mx-5 overflow-y-auto scrollbar-none px-5 py-5 xl:px-10 xl:py-10 border-4 rounded-xl border-sky-500 bg-black bg-opacity-30 max-h-screen ">
+    <div className="lg:w-full  mx-5 overflow-y-auto overflow-x-hidden scrollbar-none px-5 py-5 xl:px-10 xl:py-10 border-4 rounded-xl border-sky-500 bg-black bg-opacity-30 max-h-screen ">
       <PersonalInfo />
       <ReactTyped
         strings={[
