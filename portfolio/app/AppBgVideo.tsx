@@ -12,6 +12,7 @@ export default function AppBgVideo() {
       autoPlay
       loop
       muted
+      playsInline
     />
   )
 }
