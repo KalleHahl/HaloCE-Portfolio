@@ -33,7 +33,7 @@ const GradientBackground = ({
         className="flex flex-1 relative overflow-hidden border-b-[2px] border-t-[2px] 2k:border-t-[6px] 2k:border-b-[6px] border-sky-500"
       >
         <div className="absolute inset-0 bg-gradient-to-b from-sky-900 to-black h-full opacity-60"></div>
-        <div className="p-3 2k:p-5 flex-grow">{children}</div>
+        <div className="p-3 2k:p-5 relative flex-grow">{children}</div>
       </motion.div>
       <div className="flex justify-end h-36 2k:h-48 4k:h-64 py-3">
         <motion.div

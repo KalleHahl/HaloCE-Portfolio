@@ -24,7 +24,7 @@ const Carousel = ({ items }: CarouselProps) => {
   const cards = width < 640 ? [0] : width < 1280 ? [0, 1] : [0, 1, 2]
   return (
     <motion.div
-      className="relative flex h-full justify-center"
+      className="flex h-full justify-center"
       initial={{ y: 10, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, delay: 1 }}
