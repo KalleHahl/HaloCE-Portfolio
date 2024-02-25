@@ -7,8 +7,8 @@ interface TriangleProps {
 
 const Arrow = ({ direction, handleCLick }: TriangleProps) => {
   const { width = 1920 } = useWindowDimensions()
-  const w = width < 640 ? 30 : 40
-  const h = width < 640 ? 225 : 300
+  const w = width < 640 ? 30 : width < 2560 ? 40 : 60
+  const h = width < 640 ? 225 : width < 2560 ? 300 : 450
   const points = {
     top: [`${w / 2},0`, `0,${h}`, `${w},${h}`],
     right: [`0,0`, `0,${h}`, `${w},${h / 2}`],

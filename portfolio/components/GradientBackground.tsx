@@ -15,12 +15,12 @@ const GradientBackground = ({
 }) => {
   return (
     <div className="flex flex-col h-screen">
-      <div className="relative h-36 4k:h-64">
+      <div className="relative h-36 2k:h-48 4k:h-64">
         <div className="flex flex-col justify-end">
           <motion.p
             initial={{ x: "-100%", opacity: 0 }}
             animate={{ x: "-50%", opacity: 1 }}
-            className="font-handel text-shadow-lg shadow-sky-900 text-5xl lg:text-7xl absolute text-sky-500 bottom-0 left-1/2 lg:left-1/4"
+            className="font-handel text-shadow-lg shadow-sky-900 text-5xl lg:text-7xl 2k:text-8xl absolute text-sky-500 bottom-0 left-1/2 lg:left-1/4"
           >
             {text}
           </motion.p>
@@ -35,7 +35,7 @@ const GradientBackground = ({
         <div className="absolute inset-0 bg-gradient-to-b from-sky-900 to-black h-full opacity-60"></div>
         <div className="py-2 px-2 flex-grow">{children}</div>
       </motion.div>
-      <div className="flex justify-end h-36 4k:h-64 py-3">
+      <div className="flex justify-end h-36 2k:h-48 4k:h-64 py-3">
         <Link
           href="/"
           className="group relative flex translate-x-1/2 right-1/2 lg:right-1/4 focus:outline-none "
