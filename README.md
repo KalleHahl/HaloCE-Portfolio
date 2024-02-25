@@ -6,6 +6,8 @@
 
 I made this project for fun and as a way to learn to use Next.js and Tailwind CSS, both of which were previously unfamiliar to me. Any tips and suggestions are appreciated!
 
+[Link to website](https://halo-ce-portfolio.vercel.app)
+
 ### Current state
 
 <img src="https://github.com/KalleHahl/HaloCE-Portfolio/blob/main/docs/frontpage.png" alt="menu pic">
