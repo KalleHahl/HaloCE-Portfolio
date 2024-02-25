@@ -7,12 +7,11 @@ import kalgo from "@/public/kalgo.png"
 
 const MenuItem = ({ text, href }: { text: string; href: string }) => {
   return (
-    <Link href={href}>
-      <div className="group relative">
-        <p className=" text-sky-700 opacity-70 text-4xl lg:text-6xl 2k:text-7xl 4k:text-8xl rounded-full font-handel py-2 transition duration-300 ease-in-out group-hover:scale-105 group-hover:text-white group-hover:opacity-100 group-hover:text-shadow-lg shadow-sky-400">
-          {text}
-        </p>
-      </div>
+    <Link
+      href={href}
+      className=" text-sky-700 opacity-70 text-4xl lg:text-6xl 2k:text-7xl 4k:text-8xl rounded-full font-handel py-2 transition duration-300 ease-in-out hover:scale-105 hover:text-white hover:opacity-100 hover:text-shadow-lg shadow-sky-400 focus:scale-105 focus:text-white focus:opacity-100 focus:text-shadow-lg focus:outline-none"
+    >
+      {text}
     </Link>
   )
 }
