@@ -26,6 +26,9 @@ module.exports = {
         "4k": "3840px",
         "2k": "2560px",
       },
+      dropShadow: {
+        sm: "0 0 2px rgba(255, 255, 255, 1)",
+      },
     },
   },
   plugins: [
