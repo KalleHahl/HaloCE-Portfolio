@@ -16,7 +16,7 @@ const InfoCard = ({ item }: { item: CarouselCard }) => {
       target="_blank"
       className="w-full h-full overflow-y-auto rounded-3xl scrollbar-none bg-black bg-opacity-30 px-2 hover:ring-4 hover:ring-sky-500 hover:bg-sky-900 hover:bg-opacity-30 focus:outline-none focus:ring-4 focus:ring-sky-500 focus:bg-sky-900 focus:bg-opacity-30"
     >
-      <p className="text-center text-xl lg:text-2xl 2k:text-4xl font-bold text-sky-500">
+      <p className="text-center text-xl lg:text-2xl 2k:text-4xl font-bold ">
         {item.title}
       </p>
       <div className="flex justify-center px-4">
@@ -26,33 +26,33 @@ const InfoCard = ({ item }: { item: CarouselCard }) => {
           className="width-full h-40 lg:h-48 2k:h-80"
         />
       </div>
-      <p className="mt-2 2k:mt-6 text-xl lg:text-2xl 2k:text-4xl font-bold text-sky-500">
+      <p className="mt-2 2k:mt-6 text-xl lg:text-2xl 2k:text-4xl font-bold ">
         Description:
       </p>
-      <p className="ml-3 lg:text-lg 2k:text-2xl font-bold text-sky-500">
+      <p className="ml-3 lg:text-lg 2k:text-2xl font-bold ">
         {item.description}
       </p>
       {project && (
         <>
-          <p className="mt-2 2k:mt-6 text-xl lg:text-2xl 2k:text-4xl font-bold text-sky-500">
+          <p className="mt-2 2k:mt-6 text-xl lg:text-2xl 2k:text-4xl font-bold ">
             Technologies:
           </p>
-          <p className="ml-3 lg:text-lg 2k:text-2xl font-bold text-sky-500">
+          <p className="ml-3 lg:text-lg 2k:text-2xl font-bold ">
             {(item as ProjectCard).technologies}
           </p>
         </>
       )}
       {experience && (
         <>
-          <p className="mt-2 2k:mt-6 text-xl lg:text-2xl 2k:text-4xl font-bold text-sky-500">
+          <p className="mt-2 2k:mt-6 text-xl lg:text-2xl 2k:text-4xl font-bold ">
             Time:
           </p>
-          <p className="ml-3 lg:text-lg 2k:text-2xl font-bold text-sky-500">
+          <p className="ml-3 lg:text-lg 2k:text-2xl font-bold ">
             {(item as ExperienceCard).time}
           </p>
         </>
       )}
-      <p className="mt-2 2k:mt-6 text-xl lg:text-2xl 2k:text-4xl font-bold text-sky-500">
+      <p className="mt-2 2k:mt-6 text-xl lg:text-2xl 2k:text-4xl font-bold ">
         Difficulty:
       </p>
       <div className="flex justify-center">
