@@ -1,5 +1,6 @@
 import "./globals.css"
 import React from "react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import localfont from "next/font/local"
 import AppBgVideo from "./AppBgVideo"
@@ -21,6 +22,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <body className={`${handel.variable} bg-black relative`}>
         <AppBgVideo />
         {children}
+        <SpeedInsights />
       </body>
     </html>
   )
