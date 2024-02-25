@@ -3,7 +3,6 @@
 import React from "react"
 import { motion } from "framer-motion"
 
-import MyImage from "./MyImage"
 import AboutTextContainer from "./AboutTextContainer"
 
 const AboutPage = () => {
@@ -14,7 +13,6 @@ const AboutPage = () => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, delay: 1 }}
     >
-      <MyImage />
       <AboutTextContainer />
     </motion.div>
   )

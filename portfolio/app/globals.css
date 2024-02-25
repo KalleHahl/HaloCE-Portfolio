@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 @layer base {
-  p {
+  p,
+  div {
     color: #0ea5e9;
   }
 }
