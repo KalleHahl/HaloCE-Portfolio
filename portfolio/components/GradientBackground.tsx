@@ -42,10 +42,10 @@ const GradientBackground = ({
         >
           <Image
             src={back}
-            className=" rounded-full mx-4 skew-x-12 size-14 drop-shadow-sm duration-300 ease-in-out group-hover:scale-105 group-focus:scale-105  group-focus:outline-none"
+            className=" rounded-full mx-4 skew-x-12 size-9 lg:size-14 drop-shadow-sm duration-300 ease-in-out group-hover:scale-105 group-focus:scale-105  group-focus:outline-none"
             alt="backbutton"
           />
-          <p className="font-bold text-5xl text-shadow-lg shadow-sky-900 transition duration-300 ease-in-out group-hover:shadow-sky-400  group-hover:text-white group-hover:scale-105 group-focus:scale-105 group-focus:text-white group-focus:shadow-sky-400 group-focus:outline-none">
+          <p className="font-bold text-3xl lg:text-5xl text-shadow-lg shadow-sky-900 transition duration-300 ease-in-out group-hover:shadow-sky-400  group-hover:text-white group-hover:scale-105 group-focus:scale-105 group-focus:text-white group-focus:shadow-sky-400 group-focus:outline-none">
             =BACK
           </p>
         </Link>
