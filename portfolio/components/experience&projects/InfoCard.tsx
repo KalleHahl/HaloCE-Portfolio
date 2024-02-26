@@ -16,7 +16,7 @@ const InfoCard = ({ item }: { item: CarouselCard }) => {
       target="_blank"
       className="w-full h-full lg:py-1 2k:py-3 overflow-y-auto rounded-3xl scrollbar-none bg-black bg-opacity-30 px-2 2k:px-4 hover:ring-4 2k:hover:ring-8 hover:ring-sky-500 hover:bg-sky-900 hover:bg-opacity-30 focus:outline-none focus:ring-4 focus:ring-sky-500 focus:bg-sky-900 focus:bg-opacity-30"
     >
-      <p className=" text-center text-lg lg:text-3xl 2k:text-5xl font-bold ">
+      <p className="text-center text-lg lg:text-3xl 2k:text-5xl font-bold ">
         {item.title}
       </p>
       <div className="flex justify-center px-4 2k:pt-2">
