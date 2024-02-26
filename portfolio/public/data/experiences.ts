@@ -1,7 +1,6 @@
 import easy from "@/public/difficulties/easy.png"
 import normal from "@/public/difficulties/normal.png"
 import heroic from "@/public/difficulties/heroic.png"
-import legendary from "@/public/difficulties/legendary.png"
 import prisma from "@/public/workphotos/prisma.jpg"
 import vertico from "@/public/workphotos/vertico.png"
 import demande from "@/public/workphotos/demande.png"
