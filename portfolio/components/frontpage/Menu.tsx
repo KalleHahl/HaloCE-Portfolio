@@ -33,7 +33,7 @@ const Menu = () => {
         <MenuItem text="ABOUT" href="/about" />
         <MenuItem text="PROJECTS" href="/projects" />
         <MenuItem text="EXPERIENCE" href="/experience" />
-        <MenuItem text="CONTACT" href="/contact" />
+        {/* <MenuItem text="CONTACT" href="/contact" /> */}
       </motion.div>
     </div>
   )
