@@ -2,6 +2,7 @@ import React from "react"
 import Image from "next/image"
 import Link from "next/link"
 
+import BackHotkey from "./BackHotkey"
 import back from "@/public/back.png"
 
 const GradientBackground = ({
@@ -26,6 +27,7 @@ const GradientBackground = ({
       </div>
       <div className="flex justify-end h-36 2k:h-48 4k:h-64 py-3">
         <div className="relative translate-x-1/2 right-1/2 lg:right-1/4">
+          <BackHotkey href="/" />
           <Link href="/" className="group  flex  focus:outline-none ">
             <Image
               src={back}
