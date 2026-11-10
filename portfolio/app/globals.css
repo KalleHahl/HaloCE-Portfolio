@@ -8,6 +8,15 @@
     color: #0ea5e9;
   }
 
+  /* The page itself never scrolls (or bounces on phones/trackpads); only
+     inner boxes like the About text and the cards scroll */
+  html,
+  body {
+    height: 100%;
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
+
   /* CRT phosphor glow: a soft halo in each text's own color (currentColor).
      Elements with their own text-shadow utility keep theirs. */
   body {
