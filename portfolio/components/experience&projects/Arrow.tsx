@@ -1,33 +1,37 @@
-import useWindowDimensions from "@/utils/useWindowDimension"
-
 interface TriangleProps {
   direction: "right" | "left"
   handleCLick: (direction: "right" | "left") => void
 }
 
-const Arrow = ({ direction, handleCLick }: TriangleProps) => {
-  const { width = 1920 } = useWindowDimensions()
-  const w = width < 640 ? 30 : width < 2560 ? 40 : 60
-  const h = width < 640 ? 225 : width < 2560 ? 300 : 450
-  const points = {
-    top: [`${w / 2},0`, `0,${h}`, `${w},${h}`],
-    right: [`0,0`, `0,${h}`, `${w},${h / 2}`],
-    bottom: [`0,0`, `${w},0`, `${w / 2},${h}`],
-    left: [`${w},0`, `${w},${h}`, `0,${h / 2}`],
-  }
+// Triangle drawn in a 40x300 box and stretched to the size set by CSS
+const points = {
+  right: "0,0 0,300 40,150",
+  left: "40,0 40,300 0,150",
+}
 
+const Arrow = ({ direction, handleCLick }: TriangleProps) => {
   const align = direction === "left" ? "justify-end" : "justify-start"
 
   return (
-    <div className={`flex ${align} items-center w-1/5`}>
-      <svg width={w} height={h}>
-        <polygon
-          points={points[direction].join(" ")}
-          tabIndex={0}
-          className="fill-sky-700 opacity-50 stroke-sky-500 hover:fill-white"
-          onClick={() => handleCLick(direction)}
-        />
-      </svg>
+    <div className={`flex ${align} shrink-0 items-center lg:w-1/5`}>
+      <button
+        type="button"
+        aria-label={direction === "left" ? "Previous" : "Next"}
+        onClick={() => handleCLick(direction)}
+        className="group focus:outline-none"
+      >
+        <svg
+          viewBox="0 0 40 300"
+          preserveAspectRatio="none"
+          className="h-40 w-5 sm:h-72 sm:w-10 2k:h-[450px] 2k:w-[60px] short:h-56 tiny:h-28 tiny:w-5"
+        >
+          <polygon
+            points={points[direction]}
+            vectorEffect="non-scaling-stroke"
+            className="fill-sky-700 stroke-sky-500 opacity-50 group-hover:fill-white group-focus-visible:fill-white"
+          />
+        </svg>
+      </button>
     </div>
   )
 }

@@ -7,7 +7,13 @@ import {
 import Image from "next/image"
 import Link from "next/link"
 
-const InfoCard = ({ item }: { item: CarouselCard }) => {
+const InfoCard = ({
+  item,
+  className = "",
+}: {
+  item: CarouselCard
+  className?: string
+}) => {
   const project = "technologies" in item
   const experience = "time" in item
   const education = "status" in item
@@ -16,7 +22,7 @@ const InfoCard = ({ item }: { item: CarouselCard }) => {
       href={item.url}
       rel="noopener noreferrer"
       target="_blank"
-      className="w-full h-full lg:py-1 2k:py-3 overflow-y-auto rounded-3xl scrollbar-none bg-black bg-opacity-30 px-2 2k:px-4 hover:ring-4 2k:hover:ring-8 hover:ring-sky-500 hover:bg-sky-900 hover:bg-opacity-30 focus:outline-none focus:ring-4 focus:ring-sky-500 focus:bg-sky-900 focus:bg-opacity-30"
+      className={`${className} w-full h-full lg:py-1 2k:py-3 overflow-y-auto rounded-3xl scrollbar-none bg-black bg-opacity-30 px-2 2k:px-4 hover:ring-4 2k:hover:ring-8 hover:ring-sky-500 hover:bg-sky-900 hover:bg-opacity-30 focus:outline-none focus:ring-4 focus:ring-sky-500 focus:bg-sky-900 focus:bg-opacity-30`}
     >
       <p className="text-center text-lg lg:text-3xl 2k:text-5xl font-bold ">
         {item.title}
@@ -26,7 +32,7 @@ const InfoCard = ({ item }: { item: CarouselCard }) => {
           <Image
             src={item.image}
             alt={item.title}
-            className="width-full h-40 lg:h-48 2k:h-80"
+            className="h-40 w-auto max-w-full object-contain lg:h-48 2k:h-80 short:h-32"
           />
         </div>
       )}

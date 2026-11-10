@@ -13,10 +13,10 @@ const GradientBackground = ({
   children: React.ReactNode
 }) => {
   return (
-    <div className="flex flex-col h-screen">
-      <div className="relative h-36 2k:h-48 4k:h-64">
+    <div className="flex flex-col h-dvh">
+      <div className="relative h-36 2k:h-48 4k:h-64 short:h-20 tiny:h-12">
         <div className="flex flex-col justify-end">
-          <p className="font-handel text-shadow-lg shadow-sky-900 text-5xl lg:text-7xl 2k:text-8xl absolute text-sky-500 bottom-0 left-1/2 lg:left-1/4 -translate-x-1/2">
+          <p className="font-handel text-shadow-lg shadow-sky-900 text-4xl sm:text-5xl lg:text-7xl 2k:text-8xl tiny:text-3xl absolute text-sky-500 bottom-0 left-1/2 lg:left-1/4 -translate-x-1/2">
             {text}
           </p>
         </div>
@@ -25,16 +25,16 @@ const GradientBackground = ({
         <div className="absolute inset-0 bg-gradient-to-b from-sky-900 to-black h-full opacity-60"></div>
         <div className="p-3 2k:p-5 relative flex-grow">{children}</div>
       </div>
-      <div className="flex justify-end h-36 2k:h-48 4k:h-64 py-3">
+      <div className="flex justify-end h-36 2k:h-48 4k:h-64 py-3 short:h-20 tiny:h-12 tiny:py-1">
         <div className="relative translate-x-1/2 right-1/2 lg:right-1/4">
           <BackHotkey href="/" />
           <Link href="/" className="group  flex  focus:outline-none ">
             <Image
               src={back}
-              className=" rounded-full mx-4 skew-x-12 size-9 lg:size-14 drop-shadow-sm duration-300 ease-in-out group-hover:scale-105 group-focus:scale-105  group-focus:outline-none"
+              className=" rounded-full mx-4 skew-x-12 size-9 lg:size-14 tiny:size-8 drop-shadow-sm duration-300 ease-in-out group-hover:scale-105 group-focus:scale-105  group-focus:outline-none"
               alt="backbutton"
             />
-            <p className="font-bold text-3xl lg:text-5xl text-shadow-lg shadow-sky-900 transition duration-300 ease-in-out group-hover:shadow-sky-400  group-hover:text-white group-hover:scale-105 group-focus:scale-105 group-focus:text-white group-focus:shadow-sky-400 group-focus:outline-none">
+            <p className="font-bold text-3xl lg:text-5xl tiny:text-2xl text-shadow-lg shadow-sky-900 transition duration-300 ease-in-out group-hover:shadow-sky-400  group-hover:text-white group-hover:scale-105 group-focus:scale-105 group-focus:text-white group-focus:shadow-sky-400 group-focus:outline-none">
               =BACK
             </p>
           </Link>

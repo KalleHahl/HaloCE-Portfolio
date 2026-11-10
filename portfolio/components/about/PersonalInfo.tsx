@@ -25,14 +25,14 @@ const InfoLine = ({ title, value }: InfoLineProps) => {
 const PersonalInfo = () => {
   const age = getAge()
   return (
-    <div className="flex flex-grow justify-center mb-6">
-      <div className="sm:flex-1" />
+    <div className="mb-6 flex flex-grow flex-col items-center md:flex-row md:items-start md:justify-center">
+      <div className="hidden md:block md:flex-1" />
       <Image
         src={MyPic}
         alt="MyPicture"
-        className="h-96 w-[122px] 2k:h-[500px] 2k:w-[160px]"
+        className="h-56 w-[71px] md:h-96 md:w-[122px] 2k:h-[500px] 2k:w-[160px]"
       />
-      <div className="flex flex-1 flex-col gap-2 pl-6">
+      <div className="mt-4 flex w-full flex-col gap-2 md:mt-0 md:w-auto md:flex-1 md:pl-6">
         <InfoLine title="AGE" value={age} />
         <InfoLine title="LOCATION" value="Helsinki, Finland" />
         <InfoLine
