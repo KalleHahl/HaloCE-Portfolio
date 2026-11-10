@@ -11,7 +11,7 @@ import wellmo from "@/public/workphotos/wellmo.png"
 export const experiences = [
   {
     title: "Mobile Wellness Solutions MWS",
-    description: "Software Developer working on frontend with TypeScript and React",
+    description: "Software Developer working on frontend with TypeScript and React, and native mobile development with React Native. Also built a business intelligence dashboard and an analytics data warehouse.",
     image: wellmo,
     time: "2024-present",
     url: "https://www.wellmo.com/",

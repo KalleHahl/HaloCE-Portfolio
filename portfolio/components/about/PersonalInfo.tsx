@@ -5,14 +5,19 @@ import getAge from "@/utils/getAge"
 
 interface InfoLineProps {
   title: string
-  value: string | number
+  // A list renders one item per line
+  value: string | number | string[]
 }
 
 const InfoLine = ({ title, value }: InfoLineProps) => {
   return (
     <div className="font-bold lg:text-2xl 2k:text-4xl">
       {title}:{" "}
-      <p className="lg:text-xl 2k:text-3xl ml-6">{value}</p>
+      {(Array.isArray(value) ? value : [value]).map((line) => (
+        <p key={line} className="lg:text-xl 2k:text-3xl ml-6">
+          {line}
+        </p>
+      ))}
     </div>
   )
 }
@@ -32,9 +37,15 @@ const PersonalInfo = () => {
         <InfoLine title="LOCATION" value="Helsinki, Finland" />
         <InfoLine
           title="EDUCATION"
-          value="University Of Helsinki, Computer Science"
+          value={[
+            "Aalto University, M.Sc. Information and Service Management (ongoing)",
+            "University of Helsinki, B.Sc. Computer Science",
+          ]}
         />
-        <InfoLine title="STATUS" value="Student" />
+        <InfoLine
+          title="STATUS"
+          value="Software Developer & Master's Student"
+        />
       </div>
     </div>
   )
