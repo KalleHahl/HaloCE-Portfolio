@@ -1,7 +1,6 @@
 "use client"
 import { ReactTyped } from "react-typed"
 import { motion } from "framer-motion"
-import React from "react"
 
 import PersonalInfo from "./PersonalInfo"
 
