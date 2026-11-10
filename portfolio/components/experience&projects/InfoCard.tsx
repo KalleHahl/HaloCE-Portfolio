@@ -32,7 +32,11 @@ const InfoCard = ({
           <Image
             src={item.image}
             alt={item.title}
-            className="h-40 w-auto max-w-full object-contain lg:h-48 2k:h-80 short:h-32"
+            // Blurred preview while loading. objectFit is set as a style (not
+            // a class) so Next sizes the blurred preview to match.
+            placeholder="blur"
+            style={{ objectFit: "contain" }}
+            className="h-40 w-auto max-w-full lg:h-48 2k:h-80 short:h-32"
           />
         </div>
       )}

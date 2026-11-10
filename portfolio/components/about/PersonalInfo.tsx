@@ -30,6 +30,7 @@ const PersonalInfo = () => {
       <Image
         src={MyPic}
         alt="MyPicture"
+        placeholder="blur"
         className="h-56 w-[71px] md:h-96 md:w-[122px] 2k:h-[500px] 2k:w-[160px]"
       />
       <div className="mt-4 flex w-full flex-col gap-2 md:mt-0 md:w-auto md:flex-1 md:pl-6">
