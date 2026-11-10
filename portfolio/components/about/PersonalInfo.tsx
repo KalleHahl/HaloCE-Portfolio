@@ -1,5 +1,4 @@
 import Image from "next/image"
-import { motion } from "framer-motion"
 
 import MyPic from "@/public/MyPic.png"
 import getAge from "@/utils/getAge"
@@ -13,14 +12,7 @@ const InfoLine = ({ title, value }: InfoLineProps) => {
   return (
     <div className="font-bold lg:text-2xl 2k:text-4xl">
       {title}:{" "}
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2 }}
-        className="lg:text-xl 2k:text-3xl ml-6"
-      >
-        {value}
-      </motion.p>
+      <p className="lg:text-xl 2k:text-3xl ml-6">{value}</p>
     </div>
   )
 }

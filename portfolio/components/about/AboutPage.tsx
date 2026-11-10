@@ -1,18 +1,65 @@
 "use client"
+import { useEffect, useRef } from "react"
 import { ReactTyped } from "react-typed"
-import { motion } from "framer-motion"
 
 import PersonalInfo from "./PersonalInfo"
 
+// How close (in px) to the bottom counts as "at the bottom"
+const BOTTOM_THRESHOLD = 40
+
 const AboutPage = () => {
+  const scrollRef = useRef<HTMLDivElement>(null)
+
+  // Keep the box scrolled to the newest typed text. If the visitor scrolls
+  // up to reread, stop following until they scroll back to the bottom.
+  useEffect(() => {
+    const el = scrollRef.current
+    if (!el) return
+
+    let follow = true
+    let userInteracting = false
+
+    const isNearBottom = () =>
+      el.scrollHeight - el.scrollTop - el.clientHeight < BOTTOM_THRESHOLD
+
+    const markUserInput = () => {
+      userInteracting = true
+    }
+    const onScroll = () => {
+      if (userInteracting) {
+        follow = isNearBottom()
+        userInteracting = false
+      }
+    }
+
+    const observer = new MutationObserver(() => {
+      if (follow) el.scrollTop = el.scrollHeight
+    })
+    observer.observe(el, {
+      childList: true,
+      subtree: true,
+      characterData: true,
+    })
+
+    const inputEvents = ["wheel", "touchmove", "keydown"] as const
+    inputEvents.forEach((e) =>
+      el.addEventListener(e, markUserInput, { passive: true })
+    )
+    el.addEventListener("scroll", onScroll, { passive: true })
+
+    return () => {
+      observer.disconnect()
+      inputEvents.forEach((e) => el.removeEventListener(e, markUserInput))
+      el.removeEventListener("scroll", onScroll)
+    }
+  }, [])
+
   return (
-    <motion.div
-      className="flex flex-col h-full lg:flex-row lg:justify-center lg:px-44"
-      initial={{ y: 10, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5, delay: 1 }}
-    >
-      <div className="lg:w-full mx-5 overflow-y-auto overflow-x-hidden scrollbar-none px-5 py-5 xl:px-10 xl:py-10 border-4 rounded-xl border-sky-500 bg-black bg-opacity-30 ">
+    <div className="flex flex-col h-full lg:flex-row lg:justify-center lg:px-44">
+      <div
+        ref={scrollRef}
+        className="lg:w-full mx-5 overflow-y-auto overflow-x-hidden scrollbar-none px-5 py-5 xl:px-10 xl:py-10 border-4 rounded-xl border-sky-500 bg-black bg-opacity-30 "
+      >
         <PersonalInfo />
         <ReactTyped
           strings={[
@@ -21,10 +68,9 @@ const AboutPage = () => {
           typeSpeed={10}
           cursorChar=""
           className="text-sky-500 font-bold lg:text-3xl 2k:text-5xl"
-          startDelay={3000}
         />
       </div>
-    </motion.div>
+    </div>
   )
 }
 
