@@ -7,4 +7,85 @@
   div {
     color: #0ea5e9;
   }
+
+  /* CRT phosphor glow: a soft halo in each text's own color (currentColor).
+     Elements with their own text-shadow utility keep theirs. */
+  body {
+    text-shadow:
+      0 0 1px currentColor,
+      0 0 6px color-mix(in srgb, currentColor 45%, transparent);
+  }
+}
+
+/* CRT screen overlay: scanlines, RGB phosphor mask and a curved-glass vignette.
+   Purely visual — pointer-events: none lets every click pass through. */
+@layer components {
+  .crt-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    /* Horizontal scanlines + faint red/green/blue vertical phosphor stripes */
+    background:
+      linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+      linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 0.05),
+        rgba(0, 255, 0, 0.02),
+        rgba(0, 0, 255, 0.05)
+      );
+    background-size:
+      100% 3px,
+      3px 100%;
+  }
+
+  /* Darkened, rounded edges like the curved glass of an old tube */
+  .crt-overlay::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(0, 0, 0, 0) 60%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+    /* Inset shadow darkens the edges; the solid outer spread fills the
+       corners outside the rounded shape with black, like a monitor bezel */
+    box-shadow:
+      inset 0 0 6rem rgba(0, 0, 0, 0.8),
+      0 0 0 3rem #000;
+    border-radius: 2rem;
+  }
+
+  /* Faint dark layer whose opacity wobbles slightly = gentle CRT flicker.
+     Static (no animation) unless the visitor allows motion. */
+  .crt-overlay::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(18, 16, 16, 0.1);
+    opacity: 0.5;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .crt-overlay::before {
+      animation: crt-flicker 4s infinite;
+    }
+  }
+
+  @keyframes crt-flicker {
+    0% { opacity: 0.45; }
+    7% { opacity: 0.6; }
+    15% { opacity: 0.4; }
+    23% { opacity: 0.55; }
+    31% { opacity: 0.35; }
+    42% { opacity: 0.6; }
+    50% { opacity: 0.45; }
+    58% { opacity: 0.5; }
+    66% { opacity: 0.38; }
+    74% { opacity: 0.58; }
+    83% { opacity: 0.42; }
+    91% { opacity: 0.55; }
+    100% { opacity: 0.45; }
+  }
 }

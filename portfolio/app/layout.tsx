@@ -23,6 +23,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <AppBgVideo />
         {children}
         <SpeedInsights />
+        <div className="crt-overlay" aria-hidden="true" />
       </body>
     </html>
   )
