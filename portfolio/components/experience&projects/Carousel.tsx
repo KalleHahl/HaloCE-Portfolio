@@ -20,7 +20,9 @@ const Carousel = ({ items }: CarouselProps) => {
     )
   }
 
-  const cards = width < 640 ? [0] : width < 1280 ? [0, 1] : [0, 1, 2]
+  const maxCards = width < 640 ? 1 : width < 1280 ? 2 : 3
+  // Never show more cards than there are items, or one would appear twice
+  const cards = [...Array(Math.min(maxCards, itemsLength)).keys()]
   return (
     <div className="flex h-full justify-center">
       <Arrow direction="left" handleCLick={() => handleCLick("left")} />

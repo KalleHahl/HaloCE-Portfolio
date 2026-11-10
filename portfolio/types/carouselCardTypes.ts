@@ -3,7 +3,7 @@ import { StaticImageData } from "next/image"
 interface BaseCard {
   title: string
   description: string
-  image: StaticImageData
+  image?: StaticImageData
   difficulty: StaticImageData
   url: string
 }
@@ -16,7 +16,12 @@ export interface ExperienceCard extends BaseCard {
   time: string
 }
 
-export type CarouselCard = ProjectCard | ExperienceCard
+export interface EducationCard extends BaseCard {
+  minor?: string
+  status: string
+}
+
+export type CarouselCard = ProjectCard | ExperienceCard | EducationCard
 
 export interface CarouselProps {
   items: CarouselCard[]

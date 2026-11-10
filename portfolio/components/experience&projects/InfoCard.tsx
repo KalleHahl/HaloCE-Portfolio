@@ -2,6 +2,7 @@ import {
   CarouselCard,
   ProjectCard,
   ExperienceCard,
+  EducationCard,
 } from "@/types/carouselCardTypes"
 import Image from "next/image"
 import Link from "next/link"
@@ -9,6 +10,7 @@ import Link from "next/link"
 const InfoCard = ({ item }: { item: CarouselCard }) => {
   const project = "technologies" in item
   const experience = "time" in item
+  const education = "status" in item
   return (
     <Link
       href={item.url}
@@ -19,13 +21,15 @@ const InfoCard = ({ item }: { item: CarouselCard }) => {
       <p className="text-center text-lg lg:text-3xl 2k:text-5xl font-bold ">
         {item.title}
       </p>
-      <div className="flex justify-center px-4 2k:pt-2">
-        <Image
-          src={item.image}
-          alt={item.title}
-          className="width-full h-40 lg:h-48 2k:h-80"
-        />
-      </div>
+      {item.image && (
+        <div className="flex justify-center px-4 2k:pt-2">
+          <Image
+            src={item.image}
+            alt={item.title}
+            className="width-full h-40 lg:h-48 2k:h-80"
+          />
+        </div>
+      )}
       <p className="mt-2 2k:mt-6 text-lg lg:text-2xl 2k:text-5xl font-bold ">
         Description:
       </p>
@@ -49,6 +53,26 @@ const InfoCard = ({ item }: { item: CarouselCard }) => {
           </p>
           <p className="ml-3 lg:text-lg 2k:text-3xl font-bold ">
             {(item as ExperienceCard).time}
+          </p>
+        </>
+      )}
+      {education && (
+        <>
+          {(item as EducationCard).minor && (
+            <>
+              <p className="mt-2 2k:mt-6 text-lg lg:text-2xl 2k:text-5xl font-bold ">
+                Minor:
+              </p>
+              <p className="ml-3 lg:text-lg 2k:text-3xl font-bold ">
+                {(item as EducationCard).minor}
+              </p>
+            </>
+          )}
+          <p className="mt-2 2k:mt-6 text-lg lg:text-2xl 2k:text-5xl font-bold ">
+            Status:
+          </p>
+          <p className="ml-3 lg:text-lg 2k:text-3xl font-bold ">
+            {(item as EducationCard).status}
           </p>
         </>
       )}

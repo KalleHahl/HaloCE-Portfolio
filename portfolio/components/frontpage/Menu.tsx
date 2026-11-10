@@ -31,8 +31,9 @@ const Menu = () => {
           className="mb-10 lg:mb-20 drop-shadow-sm px-10"
         />
         <MenuItem text="ABOUT" href="/about" />
-        <MenuItem text="PROJECTS" href="/projects" />
         <MenuItem text="EXPERIENCE" href="/experience" />
+        <MenuItem text="EDUCATION" href="/education" />
+        <MenuItem text="PROJECTS" href="/projects" />
         {/* <MenuItem text="CONTACT" href="/contact" /> */}
       </motion.div>
     </div>
